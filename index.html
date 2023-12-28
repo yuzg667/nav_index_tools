@@ -1,0 +1,22 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>人云亦云</title>  
+    <script>  
+        function redirect() {  
+            var host = window.location.host;  
+            if (host === "renyyy.hellotom.top") {  
+                var currentUrl = window.location.href;  
+                var newUrl = currentUrl.replace("renyyy.hellotom.top", "t2.hellotom.top:8000"); 
+                window.location.href = newUrl;  
+
+            }  
+        }  
+    </script>  
+</head>  
+<body onload="redirect()">  
+    <!-- 在这里添加您的导航链接或其他内容 -->  
+</body>  
+</html>
