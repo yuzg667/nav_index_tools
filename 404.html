@@ -6,14 +6,15 @@
     <title>人云亦云</title>  
     <script>  
         function redirect() {  
-            var host = window.location.host;  
-            if (host === "renyyy.hellotom.top") {  
+            var url = window.location.href;  
+            if (url.includes("https://renyyy.hellotom.top") ||  url.includes("http://renyyy.hellotom.top")) {  
                 var currentUrl = window.location.href; 
                 var path = window.location.pathname;
-                var newUrl = currentUrl.replace("renyyy.hellotom.top", "t2.hellotom.top:8000"); 
+                var newUrl = currentUrl.replace("https://renyyy.hellotom.top", "https://renyyy.hellotom.top:8000").replace("http://renyyy.hellotom.top", "http://renyyy.hellotom.top:8000"); 
                 window.location.href = newUrl;  
-
-            }  
+                console.log("newUrl:", newUrl);
+            } 
+             
         }  
     </script>  
 </head>  
